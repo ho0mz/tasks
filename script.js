@@ -19,8 +19,9 @@ const getChar = (str, index) => {
 }
 
 //5
-const removeFirstOccurrences = (str, substr) => {
-    return str.replace(substr, '');
+const removeFirstOccurrences = (str, subStr) => {
+    const tempStr = str.replace(subStr, '');
+    return tempStr.replace(/\s+/g, ' ').trim();
 };
 
 //6
@@ -32,4 +33,3 @@ const getRectangleString = (width, height) => {
     }
     return topBottom + middle.repeat(height - 2) + topBottom.trim();
 };
-
